@@ -13,6 +13,13 @@ A new year, a new word camera: NeuralSnap uses artificial neural networks to gen
 
 By [Ross Goodwin](http://rossgoodwin.com), 2016
 
+## More Output Samples
+
+* [Ikeda installation](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145237613476_Epoch_64_24_Loss_1_1434_Dropout_0_25_512_16_8_9_7_Ikeda.html)
+* [Airplanes](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145240870834_Epoch_64_24_Loss_1_1434_Dropout_0_25_512_16_6_7_8_9_Planes.html)
+* [Keys](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145240853879_Epoch_64_24_Loss_1_1434_Dropout_0_25_512_16_6_7_8_9_Keys.html)
+* [Mies Van Der Rohe](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145232647105_Epoch_83_51_Loss_1_1439_Dropout_0_25_512_16_3_5_7_Mies_Van_Der_Rohe.html)
+
 ## Intent
 
 This project, in many ways a follow-up on [word.camera](https://word.camera), was created on the shoulders of two spectacular open source contributions by [Andrej Karpathy](https://github.com/karpathy): [NeuralTalk2](https://github.com/karpathy/neuraltalk) and [Char-RNN](https://github.com/karpathy/char-rnn), both of which run in [Torch](http://torch.ch/). The code I've provided in this repository is a modest Python wrapper for a few of Karpathy's scripts, and a means to experiment with a few models that I've trained on [Nvidia K80 GPUs](http://www.nvidia.com/object/tesla-k80.html) using the High Performance Computing facilities at NYU.
