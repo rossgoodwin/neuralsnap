@@ -48,11 +48,16 @@ script, output_title, ntalk_model_fp, rnn_model_fp, image_folder_fp = sys.argv
 
 # Global Parameters
 
+# Adjust any of these (except num_images) to
+# alter your results
+
 num_images = '1'
 stanza_len = '512'
 highlight_color = '#D64541' # Valencia Red
 num_steps = 16
 tgt_steps = [6,7,8,9]
+
+# Don't change these parameters
 
 SCRIPT_PATH = os.getcwd()
 NEURALTALK2_PATH = os.path.join(os.getcwd(), '..', 'neuraltalk2')

@@ -1,9 +1,10 @@
 *.t7
 *.pyc
 *.ipynb
+*.html
+*.jpg
 .ipynb_checkpoints/
 rootkey.py
 upload_to_s3.py
 testimg/
-pages/
 neuralsnap_upload.py
