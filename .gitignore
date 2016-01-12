@@ -6,3 +6,4 @@ rootkey.py
 upload_to_s3.py
 testimg/
 pages/
+neuralsnap_upload.py

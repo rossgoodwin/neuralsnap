@@ -1,19 +1,19 @@
 
 # coding: utf-8
 
-# # NeuralSnap
+# NeuralSnap
 # 
-# Works by generating a caption for the image using a model I trained on the MS COCO data set, with recurrent and convolutional neural networks using NeuralTalk2. That (brief) caption is then expanded into a poem using a recurrent neural network (Karpathy's Char-RNN), which I trained on a ~40 MB corpus of poetry.
+# Works by generating a caption for the image using a model
+# I trained on the MS COCO data set, with recurrent and
+# convolutional neural networks using NeuralTalk2. That
+# (brief) caption is then expanded into a poem using a
+# recurrent neural network (Karpathy's Char-RNN), which I
+# trained on a ~40 MB corpus of poetry.
 # 
 # By Ross Goodwin, 2016
 
-# In[1]:
-
 import time
 start_time = time.time()
-
-
-# In[2]:
 
 import os
 import sys
@@ -21,15 +21,10 @@ import subprocess
 import json
 import re
 from string import Template
-from upload_to_s3 import upload
 
 script, output_title, ntalk_model_fp, rnn_model_fp, image_folder_fp = sys.argv
 
-# ## Global Parameters
-# 
-# Replace these values with parameters that match your installation.
-
-# In[3]:
+# Global Parameters
 
 num_images = '1'
 stanza_len = '512'
@@ -37,21 +32,13 @@ highlight_color = '#D64541' # Valencia Red
 num_steps = 16
 tgt_steps = [6,7,8,9]
 
-
-# ### Static Global Parameters
-# 
-# Replace these too.
-
-# In[4]:
-
 SCRIPT_PATH = os.getcwd()
 NEURALTALK2_PATH = os.path.join(os.getcwd(), '..', 'neuraltalk2')
 CHARRNN_PATH = os.path.join(os.getcwd(), '..', 'char-rnn')
 
 
-# ## NeuralTalk2 Image Captioning
+# NeuralTalk2 Image Captioning
 
-# In[5]:
 
 os.chdir(NEURALTALK2_PATH)
 
@@ -74,7 +61,8 @@ ntalk_proc = subprocess.Popen(ntalk_cmd_list)
 ntalk_proc.communicate()
 
 
-# In[6]:
+# Load Captions
+
 
 with open(NEURALTALK2_PATH+'/vis/vis.json') as caption_json:
     caption_obj_list = json.load(caption_json)
@@ -82,9 +70,8 @@ with open(NEURALTALK2_PATH+'/vis/vis.json') as caption_json:
 caption_obj_list *= num_steps
 
 
-# ## RNN Caption Expansion
+# RNN Caption Expansion
 
-# In[7]:
 
 os.chdir(CHARRNN_PATH)
 
@@ -131,9 +118,8 @@ for i in tgt_steps:
     caption_list.append((prepped_caption, '<span style="color:'+highlight_color+';">'+prepped_caption+'</span>'))
 
 
-# ## Post Processing
+# Post Processing
 
-# In[25]:
 
 img_fps = map(
     lambda x: os.path.join(NEURALTALK2_PATH, 'vis', 'imgs', 'img%s.jpg'%x['id']),
@@ -142,8 +128,6 @@ img_fps = map(
 
 img_url = img_fps.pop()
 
-
-# In[26]:
 
 def fix_end_punctuation(exp):
     try:
@@ -165,16 +149,12 @@ expansions = map(
 exps_tups = zip(expansions, caption_list)
 
 
-# In[27]:
-
 def add_span(exp, tup):
     original, modified = map(lambda x: x.decode('utf8').encode('ascii', 'xmlcharrefreplace'), tup)
     return exp.replace(original, modified)
     
 final_exps = map(lambda (x,y): add_span(x,y), exps_tups)
 
-
-# In[28]:
 
 def make_html_block(exp):
     exp_ascii = exp.decode('utf8').encode('ascii', 'xmlcharrefreplace')
@@ -185,8 +165,6 @@ img_block = '<p class="text-center"><a href="%s"><img src="%s" width="275px" cla
 body_html = img_block + '\n'.join(map(make_html_block, final_exps))
 
 
-# In[29]:
-
 with open(SCRIPT_PATH+'/template.html', 'r') as tempfile:
     html_temp_str = tempfile.read()
     
@@ -194,23 +172,20 @@ html_temp = Template(html_temp_str)
 html_result = html_temp.substitute(title=output_title, body=body_html)
 html_fp = '%s/pages/%s.html' % (SCRIPT_PATH, re.sub(r'\W+', '_', output_title))
 
+
+# Save HTML File
+
 with open(html_fp, 'w') as outfile:
     outfile.write(html_result)
     
-# print upload(html_fp)
 
-# Sorry, you'll have to build your own upload
-# function if you want to share your results
-# on the web... for now.
-
-
-# In[30]:
+# Print Runtime
 
 end_time = time.time()
 print end_time - start_time
 
 
-# In[31]:
+# Open HTML File
 
 import webbrowser
 
