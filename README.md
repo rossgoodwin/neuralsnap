@@ -5,7 +5,7 @@ A new year, a new word camera: uses artificial neural networks to generate poetr
 
 This project, in many ways a follow-up on [word.camera](https://word.camera), was created on the shoulders of two spectacular open source contributions by [Andrej Karpathy](https://github.com/karpathy): [NeuralTalk2](https://github.com/karpathy/neuraltalk) and [Char-RNN](https://github.com/karpathy/char-rnn), both of which run in [Torch](http://torch.ch/). The code I've provided in this repository is a modest Python wrapper for a few of Karpathy's scripts, and a means to experiment with a few models that I've trained on [Nvidia K80 GPUs](http://www.nvidia.com/object/tesla-k80.html) using the High Performance Computing facilities at NYU.
 
-In my research, I am developing tools that I hope will serve to augment human creativity. These are the first models to emerge from my explorations, and I've decided to make them available to everyone:
+In my research, I am developing tools that I hope will serve to augment human creativity. These are the first neural network models to emerge from my explorations, and I've decided to make them available to others:
 
     $ wget https://s3.amazonaws.com/rossgoodwin/models/2016-01-12_char-rnn_model_01_rg.t7
     $ wget https://s3.amazonaws.com/rossgoodwin/models/2016-01-12_char-rnn_model_02_rg.t7
