@@ -1,4 +1,5 @@
-# All the time the sun / Is wheeling out of a dark bright ground.
+# All the time the sun
+# Is wheeling out of a dark bright ground.
 
 A new year, a new word camera: uses artificial neural networks to generate poetry from images.
 
