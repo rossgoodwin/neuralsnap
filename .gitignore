@@ -1,4 +1,8 @@
 *.t7
 *.pyc
+*.ipynb
+.ipynb_checkpoints/
 rootkey.py
 upload_to_s3.py
+testimg/
+pages/

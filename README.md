@@ -24,6 +24,14 @@ I have tested this software on Ubuntu 14.04 and 15.10. You can try other OS opti
 
 You'll need to clone the [NeuralTalk2](https://github.com/karpathy/neuraltalk) and [Char-RNN](https://github.com/karpathy/char-rnn) repos into the main folder, then follow Karpathy's README instructions to install the dependencies for NeuralTalk2 -- you don't need to worry about any of the GPU or training stuff, unless you want to use your own models. (The models I've provided are calibrated to run on CPUs.) Thankfully, the dependencies of Char-RNN are a subset of those required for NeuralTalk2.
 
+## Usage
+
+    $ python neuralsnap.py <output_title> <ntalk_model_filepath> <rnn_model_filepath> <image_folder_filepath>
+
+e.g.
+
+    $ python neuralsnap.py testing123 /path/to/neuraltalk2/model/2016-01-12_neuraltalk2_model_01_rg.t7 /path/to/char-rnn/model/2016-01-12_char-rnn_model_02_rg.t7 /path/to/image/folder
+
 ## Sample Output
 
 * [Rothko painting](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145215747186_Epoch_59_24_Loss_1_1455_Dropout_0_25_512_16_2_4_6_8_Rothko.html)
