@@ -1,4 +1,6 @@
-Download models into this folder.
+# Models
+
+You can put your models in this folder.
 
 To use mine:
 

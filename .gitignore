@@ -1,0 +1,4 @@
+*.t7
+*.pyc
+rootkey.py
+upload_to_s3.py
