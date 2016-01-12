@@ -1,21 +1,15 @@
-# "All the time the sun / Is wheeling out of a dark bright ground."
+### "All the time the sun / Is wheeling out of a dark bright ground."
 
 <p><a href="https://s3.amazonaws.com/rossgoodwin/neuralsnap/145215747053_img1.jpg"><img src="https://s3.amazonaws.com/rossgoodwin/neuralsnap/145215747053_img1.jpg" width="275px" class="img-thumbnail"></a></p><p><span style="color:#D64541;">A close up of a red and white striped umbrella</span> and the streets are still still and the sun is still a little and the sun is still and the sun is still and the sun is still and the sun is gone.</p><p>The sun is singing and the sun is still and the sun is looking for the sun.</p><p>The sun is still there and the sun is still and the sun is down and the sun is still and the sun is gone.</p><p>The sun is still there and the sun is gone.</p><p>The sun is still and the sun is still there.</p><p>The sun is dead.</p><p>The sun is still, and the sun is shining in the wind.</p>
 <p><span style="color:#D64541;">A close up of a red and white striped umbrella</span>, and the post office was a fire of stone in the middle of the bar. The streetcar remains of the police. The bar was a little strange and sharp as the man who had the strength to stay away from the problem. The little girl was a big fish with a green shoe which had hardly a shot and the party of the storm was being considered a strange story.</p>
 <p><span style="color:#D64541;">A close up of a red and white striped umbrella</span>, and the mountains are lighted and still there is no definition in the morning of a little of morning to the first thing that makes the moon sink under the space that will be gone from the stars.</p><p>I want to see it like this has been so awkward and unwanted. I shall see it all out of the sea of the past. Only the sound of the trees are coming up like a bone to be put on a strange ship.</p>
 <p><span style="color:#D64541;">A close up of a red and white striped umbrella</span>, and the living and the dark and the red with the sleep of a hand, and the wind remains the sun and the high leaves.</p><p>The sun is beautiful, and there is no desire to feel the mind off the sea.</p><p>In the middle of the place, the moon is opened with the human form.</p><p>The world is all the streets are all there.</p><p>The land of the broken light of life is a procession</p><p>Of many million men in lonely arms</p><p>On the page of the barn. All the time the sun</p><p>Is wheeling out of a dark bright ground.</p>
 
-## NeuralSnap
+# NeuralSnap
 
-A new year, a new word camera: uses artificial neural networks to generate poetry from images.
+A new year, a new word camera: NeuralSnap uses artificial neural networks to generate poetry from images.
 
-## Sample Output
-
-* [Rothko painting](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145215747186_Epoch_59_24_Loss_1_1455_Dropout_0_25_512_16_2_4_6_8_Rothko.html)
-* [Ikeda installation](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145237613476_Epoch_64_24_Loss_1_1434_Dropout_0_25_512_16_8_9_7_Ikeda.html)
-* [Airplanes](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145240870834_Epoch_64_24_Loss_1_1434_Dropout_0_25_512_16_6_7_8_9_Planes.html)
-* [Keys](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145240853879_Epoch_64_24_Loss_1_1434_Dropout_0_25_512_16_6_7_8_9_Keys.html)
-* [Mies Van Der Rohe](https://s3.amazonaws.com/rossgoodwin/neuralsnap/145232647105_Epoch_83_51_Loss_1_1439_Dropout_0_25_512_16_3_5_7_Mies_Van_Der_Rohe.html)
+By [Ross Goodwin](http://rossgoodwin.com), 2016
 
 ## Intent
 
@@ -55,7 +49,7 @@ e.g.
 
 ## Software License Information
 
-As noted above, my trained models are available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. However, I have licensed my code under GPLv3.
+As noted above, my trained models are available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. However, I have licensed the code in this repository under GPLv3.
 
     NeuralSnap image-to-text poetry generator
     Copyright (C) 2016  Ross Goodwin
