@@ -41,3 +41,28 @@ You'll need to clone the [NeuralTalk2](https://github.com/karpathy/neuraltalk) a
 e.g.
 
     $ python neuralsnap.py testing123 /path/to/neuraltalk2/model/2016-01-12_neuraltalk2_model_01_rg.t7 /path/to/char-rnn/model/2016-01-12_char-rnn_model_02_rg.t7 /path/to/image/folder
+
+## License Information
+
+    NeuralSnap image-to-text poetry generator
+    Copyright (C) 2016  Ross Goodwin
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    You may contact Ross Goodwin via email at ross.goodwin@gmail.com or
+    address physical correspondence to:
+
+    Ross Goodwin c/o ITP
+    721 Broadway, 4th Floor
+    New York, NY 10003

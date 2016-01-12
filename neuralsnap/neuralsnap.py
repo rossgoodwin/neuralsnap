@@ -1,16 +1,38 @@
 
 # coding: utf-8
 
+# NeuralSnap image-to-text poetry generator
+# Copyright (C) 2016  Ross Goodwin
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# You may contact Ross Goodwin via email at ross.goodwin@gmail.com or
+# address physical correspondence to:
+
+#                     Ross Goodwin c/o ITP
+#                     721 Broadway, 4th Floor
+#                     New York, NY 10003
+
+
 # NeuralSnap
 # 
-# Works by generating a caption for the image using a model
-# I trained on the MS COCO data set, with recurrent and
+# Works by generating a caption for an image with recurrent and
 # convolutional neural networks using NeuralTalk2. That
-# (brief) caption is then expanded into a poem using a
-# recurrent neural network (Karpathy's Char-RNN), which I
-# trained on a ~40 MB corpus of poetry.
+# (brief) caption is then expanded into a poem using a second
+# recurrent neural network.
 # 
-# By Ross Goodwin, 2016
+# Ross Goodwin, 2016
 
 import time
 start_time = time.time()
