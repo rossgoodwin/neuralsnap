@@ -3,6 +3,8 @@
 *.ipynb
 *.html
 *.jpg
+*.sh
+loop.py
 .ipynb_checkpoints/
 rootkey.py
 upload_to_s3.py
