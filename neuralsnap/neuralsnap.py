@@ -161,6 +161,9 @@ class ImageNarrator(object):
             
             self.caption_list.append((prepped_caption, '<span style="color:'+self.highlight_color+';">'+prepped_caption+'</span>'))
 
+        # Back to original working directory
+        os.chdir(self.SCRIPT_PATH)
+
 
     # Post Processing
 
